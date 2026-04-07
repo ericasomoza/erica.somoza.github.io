@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erica Somoza – Strategic Virtual Assistant with 2+ years in marketing &amp; operations. Meta ads (5x ROAS), SOPs (+20-30% efficiency), AI tools (-30-40% workload), CRM mastery &amp; custom designs.">
+    <meta name="author" content="Erica Somoza">
+    <meta property="og:title" content="Erica Somoza | Your Strategic VA Partner">
+    <meta property="og:description" content="From chaotic workflows to scalable systems. Meta ads averaging 5x ROAS.">
+    <meta property="og:image" content="https://drive.google.com/uc?export=view&amp;id=1Qag3E_Sym79fR37iijOBB1-BebHgXT7L">
+    <title>Erica Somoza | Strategic Virtual Assistant – Marketing &amp; Operations</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Poppins:wght@500;600&amp;display=swap">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Calendly -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --light-grey: #F8F9FA;
+            --dark-grey: #2C3E50;
+            --medium-grey: #34495E;
+            --grey-accent: #7F8C8D;
+            --cta-blue: #3498DB;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+        }
+        
+        .dark .hero-bg {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3498DB;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .pricing-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .featured {
+            transform: scale(1.05);
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgb(52 152 219 / 0.15);
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-[#2C3E50] text-[#2C3E50] dark:text-white">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-[#2C3E50]/90 backdrop-blur-md border-b border-[#F8F9FA] dark:border-[#34495E]">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-2">
+                <div class="w-9 h-9 bg-[#3498DB] rounded-2xl flex items-center justify-center text-white font-bold text-2xl">E</div>
+                <h1 class="text-2xl font-semibold tracking-tight">Erica Somoza</h1>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#rates" class="nav-link">Rates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                
+                <button onclick="toggleDarkMode()" class="w-9 h-9 flex items-center justify-center rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#34495E]">
+                    <i id="theme-icon" class="fa-solid fa-moon text-xl"></i>
+                </button>
+            </nav>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+                <i id="hamburger-icon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#2C3E50] border-t px-6 py-6">
+            <div class="flex flex-col gap-y-5 text-base">
+                <a href="#about" onclick="toggleMobileMenu()" class="py-2">About</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="py-2">Services</a>
+                <a href="#portfolio" onclick="toggleMobileMenu()" class="py-2">Portfolio</a>
+                <a href="#rates" onclick="toggleMobileMenu()" class="py-2">Rates</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center pt-16 md:pt-0">
+            <div class="md:col-span-7" data-aos="fade-right">
+                <div class="inline-flex items-center gap-x-2 bg-white dark:bg-[#34495E] px-5 py-2 rounded-3xl text-[#3498DB] text-sm font-medium mb-6">
+                    <i class="fa-solid fa-rocket"></i>
+                    2+ Years • 300+ Clients
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-semibold leading-[1.05] tracking-[-1px] mb-6">
+                    Your Strategic VA Partner –<br>Marketing, Ops &amp; Growth
+                </h1>
+                
+                <p class="text-xl text-[#7F8C8D] dark:text-[#F8F9FA] max-w-lg mb-10">
+                    From chaotic workflows to scalable systems. Meta ads averaging 5x ROAS. Social growth +30%. Custom designs that convert.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://calendly.com/eericasomoza/30min" target="_blank" 
+                       onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eericasomoza/30min'}); return false;"
+                       class="flex-1 md:flex-none bg-[#3498DB] hover:bg-[#2980B9] text-white px-8 py-5 rounded-3xl text-lg font-semibold flex items-center justify-center gap-x-3">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Free Strategy Call
+                    </a>
+                    
+                    <a href="https://drive.google.com/uc?export=download&amp;id=1FyifKY5K4OgSl7TwwJt0556IutQcxIgB" 
+                       target="_blank"
+                       class="flex-1 md:flex-none border-2 border-[#3498DB] hover:bg-[#3498DB] hover:text-white text-[#3498DB] px-8 py-5 rounded-3xl text-lg font-semibold flex items-center justify-center gap-x-3">
+                        <i class="fa-solid fa-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5" data-aos="fade-left">
+                <div class="relative mx-auto max-w-[420px]">
+                    <div class="absolute -inset-6 bg-[#3498DB] rounded-[3rem] rotate-6 opacity-10"></div>
+                    <img src="https://drive.google.com/uc?export=view&amp;id=1Qag3E_Sym79fR37iijOBB1-BebHgXT7L" 
+                         alt="Erica Somoza" 
+                         class="w-full rounded-3xl shadow-2xl border-8 border-white dark:border-[#34495E]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 bg-[#F8F9FA] dark:bg-[#34495E]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-7" data-aos="fade-up">
+                    <h2 class="text-4xl font-semibold mb-6">I help founders &amp; agencies replace constant firefighting with clear systems.</h2>
+                    <p class="text-lg leading-relaxed mb-8">
+                        With 2+ years experience, I’ve managed 300+ clients in Arbox CRM with 100% accuracy, processed Stripe payments at 99%+ success rate, 
+                        and created SOPs that improve efficiency by 20-30%. I leverage AI tools to cut workload by 30-40% while delivering market research that boosts results 10-15%.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-x-3 bg-white dark:bg-[#2C3E50] hover:shadow-xl text-[#3498DB] font-semibold px-8 h-14 rounded-3xl">
+                        Let’s build your systems together <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="md:col-span-5" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-6">Tools I Master</h3>
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="bg-white dark:bg-[#2C3E50] rounded-3xl p-5 text-center"><i class="fa-solid fa-palette text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">Canva</p></div>
+                        <div class="bg-white dark:bg-[#2C3E50] rounded-3xl p-5 text-center"><i class="fa-solid fa-video text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">CapCut</p></div>
+                        <div class="bg-white dark:bg-[#2C3E50] rounded-3xl p-5 text-center"><i class="fa-solid fa-chart-bar text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">Hootsuite</p></div>
+                        <div class="bg-white dark:bg-[#2C3E50] rounded-3xl p-5 text-center"><i class="fa-solid fa-file-excel text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">Sheets</p></div>
+                        <div class="bg-white dark:bg-[#2C3E50] rounded-3xl p-5 text-center"><i class="fa-solid fa-credit-card text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">Stripe</p></div>
+                        <div class="bg-white dark:bg-[#2C3E50] rounded-3xl p-5 text-center"><i class="fa-solid fa-square-share-nodes text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">Meta</p></div>
+                        <div class="bg-white dark:bg-[#2C3E50] rounded-3xl p-5 text-center"><i class="fa-solid fa-robot text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">ChatGPT</p></div>
+                        <div class="bg-white dark:bg-[#2C3E50] rounded-3xl p-5 text-center"><i class="fa-solid fa-brain text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">Claude</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 bg-white dark:bg-[#2C3E50]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-semibold">Done-for-you systems that scale</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-hover bg-[#F8F9FA] dark:bg-[#34495E] rounded-3xl p-8" data-aos="fade-up">
+                    <i class="fa-solid fa-share-nodes text-5xl text-[#3498DB] mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Social Media Management</h3>
+                    <p class="text-[#7F8C8D] dark:text-[#F8F9FA]">Instagram, Facebook &amp; LinkedIn growth. Content calendars, analytics &amp; engagement.</p>
+                </div>
+                
+                <div class="card-hover bg-[#F8F9FA] dark:bg-[#34495E] rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-bullseye text-5xl text-[#3498DB] mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Meta Ads</h3>
+                    <p class="text-[#7F8C8D] dark:text-[#F8F9FA]">Campaign setup, targeting &amp; optimization. Proven 3–5x ROAS results.</p>
+                </div>
+                
+                <div class="card-hover bg-[#F8F9FA] dark:bg-[#34495E] rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-gear text-5xl text-[#3498DB] mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Admin &amp; Operations</h3>
+                    <p class="text-[#7F8C8D] dark:text-[#F8F9FA]">CRM (Arbox), SOPs, payments, scheduling &amp; workflow automation.</p>
+                </div>
+                
+                <div class="card-hover bg-[#F8F9FA] dark:bg-[#34495E] rounded-3xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-wand-magic-sparkles text-5xl text-[#3498DB] mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Custom Designs</h3>
+                    <p class="text-[#7F8C8D] dark:text-[#F8F9FA]">Graphics, ebooks, social templates in Canva &amp; Figma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="py-20 bg-[#F8F9FA] dark:bg-[#34495E]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-semibold">Recent Work &amp; Case Studies</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div onclick="showPortfolioModal(1)" class="card-hover cursor-pointer bg-white dark:bg-[#2C3E50] rounded-3xl overflow-hidden">
+                    <div class="h-56 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-[#34495E] dark:to-[#2C3E50] flex items-center justify-center text-7xl">📈</div>
+                    <div class="p-6">
+                        <h4 class="font-semibold">Meta Ads Campaign – 5x ROAS</h4>
+                        <p class="text-sm text-[#7F8C8D] mt-2">Full funnel setup delivering $92k revenue from $18k spend.</p>
+                    </div>
+                </div>
+                
+                <div onclick="showPortfolioModal(2)" class="card-hover cursor-pointer bg-white dark:bg-[#2C3E50] rounded-3xl overflow-hidden">
+                    <div class="h-56 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-[#34495E] dark:to-[#2C3E50] flex items-center justify-center text-7xl">📊</div>
+                    <div class="p-6">
+                        <h4 class="font-semibold">Social Analytics Dashboard</h4>
+                        <p class="text-sm text-[#7F8C8D] mt-2">Live tracking dashboard with automated reports.</p>
+                    </div>
+                </div>
+                
+                <div onclick="showPortfolioModal(3)" class="card-hover cursor-pointer bg-white dark:bg-[#2C3E50] rounded-3xl overflow-hidden">
+                    <div class="h-56 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-[#34495E] dark:to-[#2C3E50] flex items-center justify-center text-7xl">🎨</div>
+                    <div class="p-6">
+                        <h4 class="font-semibold">Instagram &amp; LinkedIn Templates</h4>
+                        <p class="text-sm text-[#7F8C8D] mt-2">Complete brand kit + 20 reusable templates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO MODAL -->
+    <div id="portfolio-modal" onclick="if(event.target.id==='portfolio-modal')hidePortfolioModal()" 
+         class="hidden fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="bg-white dark:bg-[#2C3E50] rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-auto">
+            <div class="sticky top-0 bg-white dark:bg-[#2C3E50] border-b px-8 py-6 flex justify-between items-center">
+                <h3 id="modal-title" class="text-3xl font-semibold"></h3>
+                <button onclick="hidePortfolioModal()" class="text-4xl leading-none">×</button>
+            </div>
+            <div id="modal-content" class="p-8"></div>
+        </div>
+    </div>
+
+    <!-- RATES -->
+    <section id="rates" class="py-20 bg-white dark:bg-[#2C3E50]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-semibold">Simple, Transparent Rates</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Hourly -->
+                <div class="pricing-card bg-[#F8F9FA] dark:bg-[#34495E] rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">Hourly</h3>
+                    <div class="text-5xl font-semibold my-6">$20<span class="text-base font-normal">/hour</span></div>
+                    <ul class="space-y-3 mb-10">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-[#3498DB]"></i> Flexible admin &amp; quick tasks</li>
+                    </ul>
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                            class="w-full bg-[#3498DB] text-white py-5 rounded-3xl font-semibold">Get Started</button>
+                </div>
+                
+                <!-- Featured: Project Packages -->
+                <div class="pricing-card featured bg-[#F8F9FA] dark:bg-[#34495E] rounded-3xl p-8 ring-2 ring-[#3498DB] relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#3498DB] text-white text-xs font-bold px-6 py-1 rounded-3xl">Most Popular</span>
+                    <h3 class="text-2xl font-semibold">Project Packages</h3>
+                    <div class="text-5xl font-semibold my-6">$400-800<span class="text-base font-normal">/project</span></div>
+                    <ul class="space-y-3 mb-10">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-[#3498DB]"></i> Meta ad setup</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-[#3498DB]"></i> Social audit + 30 days</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-[#3498DB]"></i> 10 custom designs</li>
+                    </ul>
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                            class="w-full bg-[#3498DB] text-white py-5 rounded-3xl font-semibold">Get Quote</button>
+                </div>
+                
+                <!-- Monthly Retainer -->
+                <div class="pricing-card bg-[#F8F9FA] dark:bg-[#34495E] rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold">Monthly Retainer</h3>
+                    <div class="text-5xl font-semibold my-6">$1,200-1,800<span class="text-base font-normal">/month</span></div>
+                    <ul class="space-y-3 mb-10">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-[#3498DB]"></i> 40-60 hours dedicated</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-[#3498DB]"></i> Full social + ops support</li>
+                    </ul>
+                    <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eericasomoza/30min'}); return false;" 
+                            class="w-full bg-[#3498DB] text-white py-5 rounded-3xl font-semibold">Book Discovery Call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-[#F8F9FA] dark:bg-[#34495E]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-7">
+                    <h2 class="text-4xl font-semibold mb-8">Let’s turn your operations into a growth engine</h2>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" id="name" placeholder="Your name" required
+                                   class="px-6 py-5 bg-white dark:bg-[#2C3E50] rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#3498DB]">
+                            <input type="email" id="email" placeholder="Business email" required
+                                   class="px-6 py-5 bg-white dark:bg-[#2C3E50] rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#3498DB]">
+                        </div>
+                        <textarea id="message" rows="6" placeholder="Tell me about your biggest challenge..." required
+                                  class="w-full px-6 py-5 bg-white dark:bg-[#2C3E50] rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#3498DB]"></textarea>
+                        
+                        <button type="submit" 
+                                class="w-full md:w-auto bg-[#3498DB] hover:bg-[#2980B9] text-white px-10 py-6 rounded-3xl text-lg font-semibold">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:col-span-5 bg-white dark:bg-[#2C3E50] rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-6">Book a Free Strategy Call</h3>
+                    <div id="calendly-inline" class="min-h-[420px] rounded-2xl overflow-hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2C3E50] text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-x-2">
+                    <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center text-[#2C3E50] font-bold">E</div>
+                    <span class="font-semibold">Erica Somoza</span>
+                </div>
+                <p class="text-sm text-[#F8F9FA]/70">© 2026 Erica Somoza • Strategic Virtual Assistant</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode
+        function toggleDarkMode() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.theme = isDark ? 'dark' : 'light';
+            document.getElementById('theme-icon').classList.toggle('fa-moon', !isDark);
+            document.getElementById('theme-icon').classList.toggle('fa-sun', isDark);
+        }
+
+        function loadTheme() {
+            if (localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun');
+            }
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('hamburger-icon');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+
+        // Portfolio Modal
+        const portfolioData = {
+            1: { title: "Meta Ads Campaign – 5x ROAS", html: `<p class="text-lg">Full-funnel Meta campaign delivering outstanding results. View assets: <a href="https://drive.google.com/drive/folders/1e3ILjuhr1_uOHvdeQsgu7qmohV5JgLFi?usp=drive_link" target="_blank" class="text-[#3498DB] underline">Open Drive Folder</a></p>` },
+            2: { title: "Social Analytics Dashboard", html: `<p class="text-lg">Live dashboard and automated reporting system. View details: <a href="https://drive.google.com/drive/folders/1zVaHU82-ih1YTyLiJG7bKZLyWhd-Wv5L?usp=drive_link" target="_blank" class="text-[#3498DB] underline">Open Drive Folder</a></p>` },
+            3: { title: "Custom Design Package", html: `<p class="text-lg">Complete brand templates and graphics. View designs: <a href="https://drive.google.com/drive/folders/1_0UzMYi-PQIVYcGZ_FdR_CQs9MEfM5jp?usp=drive_link" target="_blank" class="text-[#3498DB] underline">Open Drive Folder</a></p>` }
+        };
+
+        function showPortfolioModal(id) {
+            document.getElementById('modal-title').textContent = portfolioData[id].title;
+            document.getElementById('modal-content').innerHTML = portfolioData[id].html;
+            document.getElementById('portfolio-modal').classList.remove('hidden');
+            document.getElementById('portfolio-modal').classList.add('flex');
+        }
+
+        function hidePortfolioModal() {
+            const modal = document.getElementById('portfolio-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Contact Form (EmailJS placeholder - replace keys when deploying)
+        function initContactForm() {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert("✅ Message sent! Erica will get back to you within 4 hours.");
+                form.reset();
+            });
+        }
+
+        // Calendly
+        function initCalendly() {
+            Calendly.initInlineWidget({
+                url: 'https://calendly.com/eericasomoza/30min',
+                parentElement: document.getElementById('calendly-inline'),
+            });
+        }
+
+        // Initialize everything
+        function init() {
+            loadTheme();
+            initContactForm();
+            initCalendly();
+            
+            // AOS
+            const aosScript = document.createElement('script');
+            aosScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+            aosScript.onload = () => AOS.init({ once: true });
+            document.head.appendChild(aosScript);
+            
+            console.log('%cErica Somoza Portfolio - Testimonials Removed', 'color:#3498DB; font-weight:bold');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
