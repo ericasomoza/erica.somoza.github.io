@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erica Somoza – Strategic Virtual Assistant with 2+ years in Marketing & Operations. Meta Ads (5x ROAS), SOPs, CRM, AI tools.">
+    <title>Erica Somoza | Strategic Virtual Assistant</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Poppins:wght@500;600&amp;display=swap">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Calendly -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --light-grey: #F8F9FA;
+            --dark-grey: #2C3E50;
+            --medium-grey: #34495E;
+            --grey-accent: #7F8C8D;
+            --cta-blue: #3498DB;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            color: var(--dark-grey);
+        }
+
+        .dark body {
+            color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, var(--light-grey) 0%, var(--white) 100%);
+        }
+
+        .dark .hero-bg {
+            background: linear-gradient(135deg, var(--dark-grey) 0%, var(--medium-grey) 100%);
+        }
+
+        .card {
+            background-color: var(--light-grey);
+        }
+
+        .dark .card {
+            background-color: var(--medium-grey);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--cta-blue);
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .featured {
+            border: 2px solid var(--cta-blue);
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-[#2C3E50]">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-[#2C3E50] border-b border-[#F8F9FA] dark:border-[#34495E]">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-[#3498DB] rounded-2xl flex items-center justify-center text-white font-bold text-2xl">E</div>
+                <h1 class="text-2xl font-semibold">Erica Somoza</h1>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#rates" class="nav-link">Rates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button onclick="toggleDarkMode()" class="w-9 h-9 flex items-center justify-center rounded-2xl hover:bg-[#F8F9FA] dark:hover:bg-[#34495E]">
+                    <i id="theme-icon" class="fa-solid fa-moon text-xl"></i>
+                </button>
+            </nav>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+                <i id="hamburger-icon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#2C3E50] border-t px-6 py-6">
+            <div class="flex flex-col gap-y-4 text-base">
+                <a href="#about" onclick="toggleMobileMenu()" class="py-2">About</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="py-2">Services</a>
+                <a href="#portfolio" onclick="toggleMobileMenu()" class="py-2">Portfolio</a>
+                <a href="#rates" onclick="toggleMobileMenu()" class="py-2">Rates</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7" data-aos="fade-right">
+                <h1 class="text-5xl md:text-6xl font-semibold leading-tight">Your Strategic VA Partner</h1>
+                <p class="mt-6 text-xl text-[#7F8C8D] dark:text-[#F8F9FA]">
+                    Marketing, Operations &amp; Growth<br>
+                    From chaotic workflows to scalable systems.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="https://calendly.com/eericasomoza/30min" target="_blank"
+                       onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eericasomoza/30min'}); return false;"
+                       class="bg-[#3498DB] text-white px-8 py-5 rounded-3xl font-semibold flex items-center gap-x-3">
+                        <i class="fa-solid fa-calendar-check"></i> Free Strategy Call
+                    </a>
+                    <a href="https://drive.google.com/uc?export=download&id=1FyifKY5K4OgSl7TwwJt0556IutQcxIgB" 
+                       target="_blank"
+                       class="border-2 border-[#3498DB] text-[#3498DB] dark:text-white px-8 py-5 rounded-3xl font-semibold flex items-center gap-x-3">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-5" data-aos="fade-left">
+                <img src="https://drive.google.com/uc?export=view&id=1Qag3E_Sym79fR37iijOBB1-BebHgXT7L" 
+                     alt="Erica Somoza" 
+                     class="w-full rounded-3xl shadow-2xl border-8 border-white dark:border-[#34495E]">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 bg-[#F8F9FA] dark:bg-[#34495E]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-7" data-aos="fade-up">
+                    <h2 class="text-4xl font-semibold">I help founders replace firefighting with clear systems.</h2>
+                    <p class="mt-6 text-lg text-[#34495E] dark:text-[#F8F9FA]">
+                        2+ years experience • 300+ clients in Arbox CRM (100% accuracy) • 
+                        SOPs improving efficiency 20-30% • AI tools cutting workload 30-40%.
+                    </p>
+                </div>
+                <div class="md:col-span-5" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-6">Tools I Master</h3>
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="card p-5 rounded-3xl text-center"><i class="fa-solid fa-palette text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">Canva</p></div>
+                        <div class="card p-5 rounded-3xl text-center"><i class="fa-solid fa-video text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">CapCut</p></div>
+                        <div class="card p-5 rounded-3xl text-center"><i class="fa-solid fa-chart-bar text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">Meta</p></div>
+                        <div class="card p-5 rounded-3xl text-center"><i class="fa-solid fa-robot text-4xl text-[#3498DB]"></i><p class="text-xs mt-2">ChatGPT</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 bg-white dark:bg-[#2C3E50]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold text-center mb-12">Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card p-8 rounded-3xl" data-aos="fade-up">
+                    <i class="fa-solid fa-share-nodes text-5xl text-[#3498DB] mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Social Media Management</h3>
+                    <p class="text-[#7F8C8D] dark:text-[#F8F9FA]">Content calendars, posting, engagement &amp; analytics for Instagram, Facebook &amp; LinkedIn.</p>
+                </div>
+                <div class="card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-bullseye text-5xl text-[#3498DB] mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Meta Ads</h3>
+                    <p class="text-[#7F8C8D] dark:text-[#F8F9FA]">Campaign setup, targeting &amp; optimization. Average 5x ROAS.</p>
+                </div>
+                <div class="card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-gear text-5xl text-[#3498DB] mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Admin &amp; Operations</h3>
+                    <p class="text-[#7F8C8D] dark:text-[#F8F9FA]">Arbox CRM, Stripe, SOPs, scheduling &amp; workflow automation.</p>
+                </div>
+                <div class="card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-wand-magic-sparkles text-5xl text-[#3498DB] mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Custom Designs</h3>
+                    <p class="text-[#7F8C8D] dark:text-[#F8F9FA]">Graphics, ebooks, social templates in Canva &amp; Figma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="py-20 bg-[#F8F9FA] dark:bg-[#34495E]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold text-center mb-12">Portfolio</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div onclick="window.open('https://drive.google.com/drive/folders/1e3ILjuhr1_uOHvdeQsgu7qmohV5JgLFi?usp=sharing', '_blank')" 
+                     class="card p-8 rounded-3xl cursor-pointer hover:shadow-xl transition-all">
+                    <div class="text-6xl mb-6">📈</div>
+                    <h4 class="font-semibold text-xl">Meta Ads Campaign</h4>
+                    <p class="text-sm text-[#7F8C8D] mt-2">5x ROAS • Full funnel setup</p>
+                    <p class="text-[#3498DB] text-sm mt-4 flex items-center">View assets →</p>
+                </div>
+
+                <div onclick="window.open('https://drive.google.com/drive/folders/1zVaHU82-ih1YTyLiJG7bKZLyWhd-Wv5L?usp=sharing', '_blank')" 
+                     class="card p-8 rounded-3xl cursor-pointer hover:shadow-xl transition-all">
+                    <div class="text-6xl mb-6">📊</div>
+                    <h4 class="font-semibold text-xl">Social Analytics</h4>
+                    <p class="text-sm text-[#7F8C8D] mt-2">Live dashboards &amp; reports</p>
+                    <p class="text-[#3498DB] text-sm mt-4 flex items-center">View assets →</p>
+                </div>
+
+                <div onclick="window.open('https://drive.google.com/drive/folders/1_0UzMYi-PQIVYcGZ_FdR_CQs9MEfM5jp?usp=sharing', '_blank')" 
+                     class="card p-8 rounded-3xl cursor-pointer hover:shadow-xl transition-all">
+                    <div class="text-6xl mb-6">🎨</div>
+                    <h4 class="font-semibold text-xl">Custom Designs</h4>
+                    <p class="text-sm text-[#7F8C8D] mt-2">Templates, ebooks &amp; graphics</p>
+                    <p class="text-[#3498DB] text-sm mt-4 flex items-center">View assets →</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RATES -->
+    <section id="rates" class="py-20 bg-white dark:bg-[#2C3E50]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold text-center mb-12">Rates</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="card p-8 rounded-3xl">
+                    <h3 class="text-2xl font-semibold">Hourly</h3>
+                    <div class="text-5xl font-semibold my-6">$20<span class="text-base font-normal text-[#7F8C8D]">/hr</span></div>
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                            class="w-full bg-[#3498DB] text-white py-5 rounded-3xl font-semibold">Get Started</button>
+                </div>
+
+                <div class="card p-8 rounded-3xl featured">
+                    <span class="bg-[#3498DB] text-white text-xs px-5 py-1 rounded-3xl absolute -top-3 left-1/2 -translate-x-1/2">Most Popular</span>
+                    <h3 class="text-2xl font-semibold">Project Packages</h3>
+                    <div class="text-5xl font-semibold my-6">$400–800<span class="text-base font-normal text-[#7F8C8D]">/project</span></div>
+                    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                            class="w-full bg-[#3498DB] text-white py-5 rounded-3xl font-semibold">Get Quote</button>
+                </div>
+
+                <div class="card p-8 rounded-3xl">
+                    <h3 class="text-2xl font-semibold">Monthly Retainer</h3>
+                    <div class="text-5xl font-semibold my-6">$1,200–1,800<span class="text-base font-normal text-[#7F8C8D]">/mo</span></div>
+                    <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/eericasomoza/30min'}); return false;" 
+                            class="w-full bg-[#3498DB] text-white py-5 rounded-3xl font-semibold">Book Call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-[#F8F9FA] dark:bg-[#34495E]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-7">
+                    <h2 class="text-4xl font-semibold mb-8">Let's work together</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <input type="text" id="name" placeholder="Your name" class="w-full px-6 py-5 rounded-3xl bg-white dark:bg-[#2C3E50]">
+                        <input type="email" id="email" placeholder="Email address" class="w-full px-6 py-5 rounded-3xl bg-white dark:bg-[#2C3E50]">
+                        <textarea id="message" rows="5" placeholder="Tell me about your project..." class="w-full px-6 py-5 rounded-3xl bg-white dark:bg-[#2C3E50]"></textarea>
+                        <button type="submit" class="bg-[#3498DB] text-white px-10 py-6 rounded-3xl font-semibold">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:col-span-5">
+                    <h3 class="text-2xl font-semibold mb-6">Or book a call directly</h3>
+                    <div id="calendly-inline" class="bg-white dark:bg-[#2C3E50] rounded-3xl p-4 min-h-[420px]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2C3E50] text-white py-12 text-center">
+        <p class="text-sm">© 2026 Erica Somoza • Strategic Virtual Assistant</p>
+    </footer>
+
+    <script>
+        // Dark Mode
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('theme-icon');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+            localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // Load saved theme
+        if (localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // Simple form handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! Your message has been sent. Erica will reply within 4 hours.");
+            this.reset();
+        });
+
+        // Calendly inline
+        function initCalendly() {
+            if (document.getElementById('calendly-inline')) {
+                Calendly.initInlineWidget({
+                    url: 'https://calendly.com/eericasomoza/30min',
+                    parentElement: document.getElementById('calendly-inline'),
+                });
+            }
+        }
+
+        // AOS
+        const aosScript = document.createElement('script');
+        aosScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+        aosScript.onload = () => AOS.init({ once: true });
+        document.head.appendChild(aosScript);
+
+        window.onload = initCalendly;
+    </script>
+</body>
+</html>
